@@ -1,6 +1,6 @@
-#GETTING & CLEANING DATA
+# GETTING & CLEANING DATA
 
-##Step-by-step Procedures
+## Step-by-step Procedures
 
 *loading activity labels
   * activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt")[,2] *
