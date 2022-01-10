@@ -20,9 +20,15 @@ power_consumption$dateTime <- as.POSIXct(dateTime)
 
 ## Plot 1
 hist(power_consumption$Global_active_power, main="Global Active Power", xlab = "Global Active Power (kilowatts)", col="red")
+# Plot1
+# #dev.copy(png,"plot1.png")
+#dev.off()
 
 ## Plot 2
 plot(power_consumption$Global_active_power~power_consumption$dateTime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+# Plot 2
+# dev.copy(png, "plot2.png")
+#dev.off()
 
 ## Plot 3
 with(power_consumption, {
@@ -33,6 +39,9 @@ with(power_consumption, {
 })
 legend("topright", col=c("black", "red", "blue"), lwd=c(1,1,1), 
        c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+# Plot 3
+# dev.copy(png, "plot3.png")
+#dev.off()
 
 ## Plot 4
 par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
@@ -50,3 +59,7 @@ with(power_consumption, {
   plot(Global_reactive_power~dateTime, type="l", 
        ylab="Global Rective Power (kilowatts)",xlab="")
 })
+
+# Plot 4
+#dev.copy(png, "plot4.png")
+#dev.off()
